@@ -18,8 +18,17 @@ function App() {
     fetchContactData();
   }, []);
 
+  const handleAddContact = () => {};
+
   return (
     <>
+      <div className="contactForm">
+        <input type="text" placeholder="Name"></input>
+        <input type="text" placeholder="Email"></input>
+        <input type="number" placeholder="Phone Number" min={1}></input>
+        <button onClick={handleAddContact}>Add Contact</button>
+      </div>
+
       <div className="contactList">
         {contacts.map((contact) => (
           <ul key={contact.id}>
